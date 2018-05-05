@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npm-run-all -p watch:*",
+    "watch:sass": "node-sass -w --source-map true scss/ -o css/",
+    "watch:bs": "browser-sync start --server --files css/*.css *.html --browser chrome",
+    "autoprefix": "postcss css/style.css -u autoprefixer -o css/style.prefixed.css",
+    "watch:autoprefix": "onchange \"css/style.css\" -d 50 -- npm run autoprefix"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/Project-web-2018-01/project-one/issues"
   },
-  "homepage": "https://github.com/Project-web-2018-01/project-one#readme"
+  "homepage": "https://github.com/Project-web-2018-01/project-one#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.4.1",
+    "browser-sync": "^2.23.7",
+    "hoek": "^5.0.3",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
+    "onchange": "^3.3.0",
+    "postcss-cli": "^5.0.0"
+  }
 }
