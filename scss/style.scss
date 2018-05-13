@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url(/images/background/Background.jpg) center/cover no-repeat;
+}
+
 @font-face {
   font-family: 'font-heading';
   src: url('../web-fonts/DroidSerif-Regular-webfont.woff') format('woff');
