@@ -27,15 +27,17 @@
     left: 0;
     height: 3px;
     width: 91px;
-    color: #ad7835;
+    background-color: #ad7835;
   }
 }
 
 .about-me__paragraph {
   font: 1rem $font-text;
+  line-height: 1.75;
   color: #fff;
   max-width: 29.25rem;
   width: 100%;
+  margin-top: 1%;
 }
 
 .about-me__btn {
@@ -55,6 +57,6 @@
 
 .about-me__photo {
   position: absolute;
-  right: 70px;
-  bottom: -65px;
+  right: 6%;
+  bottom: -25%;
 }
